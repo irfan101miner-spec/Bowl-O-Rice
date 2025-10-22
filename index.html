@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bowl O Rice</title>
+  <style>
+    :root { --brand:#f59e0b; --ink:#111827; --muted:#6b7280; --bg:#fafafa; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .container{max-width:1000px;margin:auto;padding:24px}
+    .nav{position:sticky;top:0;background:#fffcc;border-bottom:1px solid #e5e7eb;backdrop-filter:saturate(180%) blur(6px)}
+    .nav .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1000px;margin:auto}
+    .brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit}
+    .logo{width:40px;height:40px;border-radius:12px;background:var(--brand);display:grid;place-items:center;color:#fff;font-size:20px;box-shadow:0 6px 12px rgba(0,0,0,.08)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid #e5e7eb;text-decoration:none;color:var(--ink)}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+    .hero{padding:56px 24px}
+    .hero h1{font-size:44px;margin:0 0 8px;font-weight:900;line-height:1.05}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:20px}
+    @media(min-width:900px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} }
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    h2{font-size:28px;margin:0 0 8px;font-weight:900}
+    h3{font-size:18px;margin:0 0 6px}
+    ul.menu{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:12px}
+    .row{display:flex;justify-content:space-between;gap:12px}
+    footer{border-top:1px solid #e5e7eb;background:#fff;margin-top:40px}
+    .pill{display:inline-block;background:#fffbeb;border:1px solid #fde68a;color:#92400e;padding:6px 10px;border-radius:999px;font-size:12px}
+    img.hero{width:100%;height:100%;object-fit:cover;border-radius:22px;border:1px solid #e5e7eb;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+    .small{font-size:12px}
+  </style>
+</head>
+<body>
+
+  <!-- nav -->
+  <div class="nav">
+    <div class="inner">
+      <a class="brand" href="#home">
+        <div class="logo">🍚</div>
+        <div>
+          <div style="font-weight:900;line-height:1">bowl <span style="text-transform:lowercase">O</span> rice</div>
+          <div class="small muted">Asian bowls • Takeaway</div>
+        </div>
+      </a>
+      <div class="small">
+        <a class="btn" href="#menu">Menu</a>
+        <a class="btn" href="#visit">Visit</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" href="tel:+440000000000">Order Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <section id="home" class="container hero grid grid-2">
+    <div>
+      <h1>Fresh, fast, flavour-packed bowls.</h1>
+      <p class="muted">Welcome to <strong>bowl O rice</strong> — your neighbourhood takeaway for Asian-inspired rice and noodle bowls, made to order.</p>
+      <p>
+        <a class="btn primary" href="#menu">View Menu</a>
+        <a class="btn" href="#contact">Catering & Questions</a>
+      </p>
+      <p class="small muted">Allergens? Ask our team. Gluten-free options available.</p>
+    </div>
+    <div>
+      <img class="hero" alt="Rice bowl" src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=1600&auto=format&fit=crop">
+    </div>
+  </section>
+
+  <!-- order -->
+  <section class="container grid grid-3">
+    <a class="card" href="tel:+440000000000">
+      <h3>Call to Order</h3>
+      <div class="muted small">We’ll have your bowl ready.</div>
+      <p><strong>+44 00 0000 0000</strong></p>
+    </a>
+    <div class="card">
+      <h3>Order on Deliveroo</h3>
+      <div class="muted small">Add your link here.</div>
+      <p><span class="pill">Delivery</span></p>
+    </div>
+    <div class="card">
+      <h3>Order on Uber Eats</h3>
+      <div class="muted small">Add your link here.</div>
+      <p><span class="pill">Delivery</span></p>
+    </div>
+  </section>
+
+  <!-- menu -->
+  <section id="menu" class="container" style="margin-top:36px">
+    <div class="row" style="align-items:end">
+      <h2>Menu</h2>
+      <span class="small muted">Prices include VAT. Subject to change.</span>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:16px">
+      <div class="card">
+        <h3>Fried Rice Specials</h3>
+        <ul class="menu">
+          <li class="row"><div><strong>Teriyaki Fried Rice</strong><br><span class="muted small">Choose chicken / tofu / shrimp. Sesame finish.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Kimchi Fried Rice</strong><br><span class="muted small">Add pork belly or shrimp. Fried egg + seaweed.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Chicken Fried Rice</strong><br><span class="muted small">Tender chicken, veg, soy & sesame.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Szechuan Fried Rice</strong><br><span class="muted small">Peppercorn heat; chicken / shrimp / tofu.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Nasi Goreng</strong><br><span class="muted small">Aromatic spices, sweet soy, fried egg.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Veg Fried Rice (V)</strong><br><span class="muted small">Seasonal vegetables, light soy.</span></div><div>—</div></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Stir-Fry Creations</h3>
+        <ul class="menu">
+          <li class="row"><div><strong>Sizzling Stir-Fry</strong><br><span class="muted small">Beef, broccoli, peppers, ginger-garlic.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Szechuan Chicken</strong><br><span class="muted small">Fiery sauce, chilli & peppercorn.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Market Fresh Tofu (V)</strong><br><span class="muted small">Seasonal veg, light sauce.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Shrimp & Veg</strong><br><span class="muted small">Delicate white-wine sauce (great with quinoa).</span></div><div>—</div></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Build Your Bowl</h3>
+        <ul class="menu">
+          <li><strong>Proteins:</strong> Grilled chicken, jumbo shrimp, scallops, salmon, tofu/tempeh, edamame</li>
+          <li><strong>Vegetables:</strong> asparagus, snow peas, peppers, onions, zucchini, broccoli/cauliflower, carrots, sprouts, mushrooms, beans</li>
+          <li><strong>Bases:</strong> white rice, jasmine, brown, quinoa, egg noodles, ramen noodles</li>
+          <li><strong>Sauces:</strong> teriyaki (low sugar), Worcestershire, low-sodium soy, white-wine vinegar, plum, ponzu</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Salad Bowls</h3>
+        <ul class="menu">
+          <li class="row"><div><strong>Grilled Chicken Salad</strong><br><span class="muted small">Mixed greens, tomatoes, cucumbers, vinaigrette.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Mediterranean Salad</strong><br><span class="muted small">Romaine, olives, feta, tangy dressing.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Asian Chicken Salad</strong><br><span class="muted small">Cabbage, carrot, sesame-ginger.</span></div><div>—</div></li>
+          <li class="row"><div><strong>Berry Almond (V)</strong><br><span class="muted small">Strawberries, blueberries, raspberries, almonds.</span></div><div>—</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- visit/contact -->
+  <section id="visit" class="container grid grid-2" style="margin-top:24px">
+    <div class="card">
+      <h3>Visit Us</h3>
+      <p class="muted small">123 Sample Street, Town, Postcode</p>
+      <div style="border:1px solid #e5e7eb;border-radius:14px;overflow:hidden">
+        <iframe title="Map" width="100%" height="260" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19801.29264088856!2d-0.1277585!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMwJzI2LjUiTiAwwrAwNycyMC42Ilc!5e0!3m2!1sen!2sus!4v1685647333333"></iframe>
+      </div>
+      <p class="small muted">Hours may vary on holidays.</p>
+      <ul class="small">
+        <li>Mon–Wed: 11:30–22:00</li>
+        <li>Thu: 11:30–22:30</li>
+        <li>Fri: 11:30–23:00</li>
+        <li>Sat: 12:00–23:00</li>
+        <li>Sun: 12:00–21:00</li>
+      </ul>
+    </div>
+    <div id="contact" class="card">
+      <h3>Contact</h3>
+      <p class="small"><strong>Phone:</strong> <a href="tel:+440000000000">+44 00 0000 0000</a></p>
+      <p class="small"><strong>Email:</strong> <a href="mailto:hello@bowlorice.co.uk">hello@bowlorice.co.uk</a></p>
+      <p class="small"><strong>Instagram:</strong> @bowlorice</p>
+      <p class="small muted">Allergen info available on request.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container row" style="justify-content:space-between;align-items:center">
+      <div class="small muted">© <span id="y"></span> Bowl O Rice</div>
+      <div class="small muted"><a href="#">Privacy</a> • <a href="#">Allergens</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
